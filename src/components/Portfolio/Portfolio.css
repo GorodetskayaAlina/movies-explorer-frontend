@@ -1,0 +1,86 @@
+.portfolio {
+    margin-bottom: 194px;
+}
+
+.portfolio__title {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #A0A0A0;
+    margin: 0 auto 50px;
+    width: 1140px;
+}
+
+.portfolio__github-link {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    color: #000000;
+    width: 1140px;
+    border-bottom: 1px solid #E8E8E8;
+    margin: 0 auto 20px;
+    padding-bottom: 9px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    letter-spacing: -0.04em;
+}
+
+.portfolio__github-link span {
+    line-height: 60px;
+}
+
+
+.portfolio__github-link:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 125px;
+}
+
+.portfolio__github-link:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1279px) {
+    .portfolio {
+        margin-bottom: 160px;
+    }
+
+    .portfolio__title {
+        width: 668px;
+    }
+
+    .portfolio__github-link {
+        font-size: 28px;
+        width: 668px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .portfolio {
+        margin-bottom: 150px;
+    }
+
+    .portfolio__title {
+        font-size: 14px;
+        margin: 0 auto 40px;
+        width: 292px;
+    }
+
+    .portfolio__github-link {
+        font-size: 18px;
+        line-height: 28px;
+        width: 292px;
+        padding-bottom: 19px;
+    }
+    
+    .portfolio__github-link span {
+        line-height: 28px;
+    }
+}

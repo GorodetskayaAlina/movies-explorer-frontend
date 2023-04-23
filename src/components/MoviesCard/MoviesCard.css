@@ -1,0 +1,145 @@
+.card {
+    width: 364px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card__link {
+    display: flex;
+}
+
+.card__image {
+    width: 364px;
+    height: 203px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card__description {
+    width: 364px;
+    box-sizing: border-box;
+    background-color: #FDFDFD;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, max-content));
+    grid-template-rows: repeat(2, minmax(min-content, max-content));
+    gap: 10px 12px;
+    padding: 10px 16px 16px;
+}
+
+.card__name {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    width: 290px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+.card__button-like {
+    border: none;
+    background-image: url(../../images/card-like.svg);
+    width: 30px;
+    height: 30px;
+    background-color: #FDFDFD;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.card__button-like-active {
+    border: none;
+    background-image: url(../../images/card-like-active.svg);
+    width: 30px;
+    height: 30px;
+    background-color: #FDFDFD;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.card__button-delete {
+    border: none;
+    background-image: url(../../images/delete-button.svg);
+    width: 30px;
+    height: 30px;
+    background-color: #FDFDFD;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.card__button-like-active:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.card__button-like:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.card__button-delete:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.card__duration {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #A0A0A0;
+}
+
+@media screen and (max-width: 1279px) {
+    .card {
+        width: 339px;
+    }
+
+    .card__image {
+        width: 339px;
+        height: 190px;
+    }
+
+    .card__description {
+        width: 339px;
+        gap: 8px 21px;
+        padding: 8px 14px 13px;
+    }
+
+    .card__name {
+        width: 260px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .card {
+        width: 300px;
+    }
+
+    .card__image {
+        width: 300px;
+        height: 168px;
+    }
+
+    .card__description {
+        width: 300px;
+        gap: 6px 14px;
+    }
+
+    .card__name {
+        width: 240px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .card__duration {
+        font-size: 10px;
+        line-height: 12px;
+    }
+}

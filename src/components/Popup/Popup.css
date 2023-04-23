@@ -1,0 +1,114 @@
+.popup {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* visibility: hidden; */
+}
+
+.popup__body {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 520px;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup__close {
+    border: none;
+    background: none;
+    background-image: url('../../images/closePopup.svg');
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: 0;
+    transition: opacity 0.3s ease;
+}
+
+.popup__close:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.popup__navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup__link {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    text-decoration: none;
+    margin: 0 auto 28px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.popup__link:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.popup__link:first-child {
+    margin: 159px auto 28px;
+}
+
+.popup__link:last-child {
+    margin: 0 auto 621px;
+}
+
+.popup__link_active {
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #000;
+    margin: 0 auto 22px;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.popup__link_active:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.popup__link_active:first-child {
+    margin: 159px auto 22px;
+}
+
+.popup__link_active:last-child {
+    margin: 0 auto 615px;
+}
+
+.popup__button {
+    transition: opacity 0.3s ease;
+}
+
+.popup__button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .popup__body {
+        width: 100%;
+    }
+}
