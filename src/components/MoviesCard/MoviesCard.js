@@ -5,7 +5,7 @@ function MoviesCard({ trailerLink, image, nameRU, duration, isSavedMoviesPage })
   return (
     <>
       <article className='card' >
-        <a href={trailerLink} className='card__link'>
+        <a href={trailerLink} className='card__link' target='_blank' rel='noreferrer'>
           <img src={`${image}`} alt={`${nameRU}`} className='card__image' />
         </a>
         <div className='card__description'>

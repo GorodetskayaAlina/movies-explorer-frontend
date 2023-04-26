@@ -17,7 +17,7 @@ function AboutMe() {
                     публичного права и управления МГЮА им. О.Е. Кутафина. Недавно начала кодить. С 2020 года работала
                     помощником юриста. На данный момент прохожу курс по веб-разработке, планирую заниматься фриланс-заказами.</p>
 
-                <a className='aboutMe__github-link' href='https://github.com/GorodetskayaAlina'>Github</a>
+                <a className='aboutMe__github-link' target='_blank' rel='noreferrer' href='https://github.com/GorodetskayaAlina'>Github</a>
             </div>
 
             <img className="aboutMe__photo" src={student} alt='Фото создателя сайта' />

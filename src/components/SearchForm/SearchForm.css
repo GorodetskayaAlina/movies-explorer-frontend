@@ -78,6 +78,7 @@
     display: block;
     border-radius: 20px;
     position: relative;
+    cursor: pointer;
 }
 
 .search__visible-checkbox:after {

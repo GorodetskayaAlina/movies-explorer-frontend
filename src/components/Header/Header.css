@@ -1,10 +1,12 @@
 .header {
     padding: 18px 61px;
     width: 1140px;
+    height: 83px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    box-sizing: border-box;
 }
 
 .header__pink {

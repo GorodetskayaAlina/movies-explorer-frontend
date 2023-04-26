@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Navigation.css';
 import button from '../../images/account-button.svg'
+import Popup from '../Popup/Popup';
 
 function Navigation({ loggedIn }) {
     const location = useLocation().pathname;
+
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+    const togglePopup = () => {
+        setIsPopupOpen(!isPopupOpen);
+    }
 
     return (
         <nav className='navigation'>
@@ -17,7 +24,6 @@ function Navigation({ loggedIn }) {
                     <div>
                         <Link to='/profile'><img src={button} alt='Ссылка на аккаунт' className='navigation__button' /></Link>
                     </div>
-                    <button className='navigation__popup'></button>
                 </>
             ) : (
                 <div className='navigation__main'>
@@ -25,6 +31,10 @@ function Navigation({ loggedIn }) {
                     <Link to='/signin'><button className='navigation__signin'>Войти</button></Link>
                 </div>
             )}
+            {!isPopupOpen ? (
+                <button className={location === '/' ? 'navigation__popup_close' :'navigation__popup'} onClick={togglePopup}></button>
+            ) : <Popup onClose={togglePopup} />
+            }
         </nav>
     );
 }
