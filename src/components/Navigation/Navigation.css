@@ -142,13 +142,13 @@
     display: none;
 }
 
-.navigation__popup_close {
-    display: none;
-}
-
 .navigation__popup:hover {
     opacity: 0.6;
     cursor: pointer;
+}
+
+.navigation__popup_close {
+    display: none;
 }
 
 @media screen and (max-width: 1279px) {
@@ -169,12 +169,12 @@
     .navigation__popup {
         margin: 0;
     }
-    
+
     .navigation__signup {
         font-size: 10px;
         margin-right: 14px;
     }
-    
+
     .navigation__signin {
         font-size: 10px;
         line-height: 16px;

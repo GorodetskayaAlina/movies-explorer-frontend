@@ -1,11 +1,11 @@
 .header {
     padding: 18px 61px;
-    width: 1140px;
+    width: 1263px;
     height: 83px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     box-sizing: border-box;
 }
 

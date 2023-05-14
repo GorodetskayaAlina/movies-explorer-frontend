@@ -4,15 +4,16 @@ import Header from '../Header/Header';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
 import Footer from '../Footer/Footer';
+import Preloader from '../Preloader/Preloader';
 
+function Movies({ loggedIn, movies, savedMovies, handleSubmitForm, handleCheckbox, isChecked, isLoading, onMovieSave, setIsChecked }) {
 
-function Movies() {
   return (
     <div className='movies'>
-    <Header loggedIn={true} />
-    <SearchForm />
-    <MoviesCardList isSavedMoviesPage={false}/>
-    <Footer />
+      <Header loggedIn={loggedIn} />
+      <SearchForm handleSubmitForm={handleSubmitForm} handleCheckbox={handleCheckbox} isChecked={isChecked} setIsChecked={setIsChecked} />
+      {isLoading ? <Preloader /> : <MoviesCardList isSavedMoviesPage={false} movies={movies} savedMovies={savedMovies} onMovieSave={onMovieSave} />}
+      <Footer />
     </div>
   );
 }
