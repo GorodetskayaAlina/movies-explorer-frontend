@@ -4,4 +4,4 @@
 
 Ссылка на фронтенд http://gorodetskaya.movie.nomoredomains.monster/
 
-https://github.com/GorodetskayaAlina/movies-explorer-frontend/pull/2
+Ссылка на пул реквест https://github.com/GorodetskayaAlina/movies-explorer-frontend/pull/2
