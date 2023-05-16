@@ -1,6 +1,10 @@
 import React from 'react';
 import './MoviesCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard';
+import {
+  BOTTOM_BORDER_BIG_WIDTH, TOP_BORDER_MIDDLE_WIDTH, BOTTOM_BORDER_MIDDLE_WIDTH, TOP_BORDER_SMALL_WIDTH, ADDING_MOVIES_BIG_WIDTH,
+  ADDING_MOVIES_SMALL_WIDTH, MOVIE_LIST_BIG_WIDTH, MOVIE_LIST_MIDDLE_WIDTH, MOVIE_LIST_SMALL_WIDTH
+} from '../../utils/constants';
 
 function MoviesCardList({ isSavedMoviesPage, movies, savedMovies, onMovieSave, onMovieDelete }) {
   const [showedMovies, setShowedMovies] = React.useState(movies);
@@ -15,13 +19,13 @@ function MoviesCardList({ isSavedMoviesPage, movies, savedMovies, onMovieSave, o
 
   //кнопка 'еще'
   function getMoreMovies() {
-    if (windowWidth.innerWidth > 1279) {
-      setShowedMovies(movies.slice(0, showedMovies.length + 3))
-    } else if (windowWidth.innerWidth < 1280 && windowWidth.innerWidth > 767) {
-      setShowedMovies(movies.slice(0, showedMovies.length + 2))
+    if (windowWidth.innerWidth > BOTTOM_BORDER_BIG_WIDTH) {
+      setShowedMovies(movies.slice(0, showedMovies.length + ADDING_MOVIES_BIG_WIDTH))
+    } else if (windowWidth.innerWidth < TOP_BORDER_MIDDLE_WIDTH && windowWidth.innerWidth > TOP_BORDER_SMALL_WIDTH) {
+      setShowedMovies(movies.slice(0, showedMovies.length + ADDING_MOVIES_SMALL_WIDTH))
     }
     else {
-      setShowedMovies(movies.slice(0, showedMovies.length + 2))
+      setShowedMovies(movies.slice(0, showedMovies.length + ADDING_MOVIES_SMALL_WIDTH))
     }
   }
 
@@ -49,12 +53,12 @@ function MoviesCardList({ isSavedMoviesPage, movies, savedMovies, onMovieSave, o
 
   //отслеживаем изменения экрана
   React.useEffect(() => {
-    if (windowWidth.innerWidth > 1279) {
-      setShowedMovies(movies.slice(0, 12))
-    } else if (windowWidth.innerWidth < 1280 && windowWidth.innerWidth > 767) {
-      setShowedMovies(movies.slice(0, 8));
-    } else if (windowWidth.innerWidth < 768) {
-      setShowedMovies(movies.slice(0, 5));
+    if (windowWidth.innerWidth > BOTTOM_BORDER_BIG_WIDTH) {
+      setShowedMovies(movies.slice(0, MOVIE_LIST_BIG_WIDTH))
+    } else if (windowWidth.innerWidth < TOP_BORDER_MIDDLE_WIDTH && windowWidth.innerWidth > TOP_BORDER_SMALL_WIDTH) {
+      setShowedMovies(movies.slice(0, MOVIE_LIST_MIDDLE_WIDTH));
+    } else if (windowWidth.innerWidth < BOTTOM_BORDER_MIDDLE_WIDTH) {
+      setShowedMovies(movies.slice(0, MOVIE_LIST_SMALL_WIDTH));
     } else {
       setShowedMovies(movies);
     }
