@@ -87,7 +87,7 @@ function App() {
 
   //фильтр поиска через форму
   function filterMovies(request, movies) {
-    return movies.filter(movie => movie.nameRU.includes(request.toLowerCase().trim()));
+    return movies.filter(movie => movie.nameRU.toLowerCase().trim().includes(request.toLowerCase().trim()));
   }
 
   //фильтр чекбокса
