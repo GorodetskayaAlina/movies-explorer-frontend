@@ -16,10 +16,10 @@ function Profile({ loggedIn, onSignOut, onUpdateUser }) {
         } else {
             // Передаём значения управляемых компонентов во внешний обработчик
             onUpdateUser({
-                name: values.profilename || currentUser.name,
+                name: values.name,
                 email: values.email,
             });
-            console.log (values.profilename, values.email)
+            console.log(values.name, values.email)
         }
     }
 
@@ -36,10 +36,10 @@ function Profile({ loggedIn, onSignOut, onUpdateUser }) {
                     <fieldset className='profile__fieldset' name='signup'>
                         <label className='profile__label'>
                             <span className='profile__value'>Имя</span>
-                            <input type='text' name='profilename' className='profile__form-item' placeholder='Имя' onChange={handleChange}
-                                value={values.profilename || currentUser.name || ''} minLength='2'
+                            <input type='text' name='name' className='profile__form-item' placeholder='Имя' onChange={handleChange}
+                                value={values.name || ''} minLength='2'
                                 maxLength='30' pattern="[A-Za-zА-Яа-яЁё\- ]+" required />
-                            <span id='profile-error' className='profile__error'>{errors.profilename}</span>
+                            <span id='profile-error' className='profile__error'>{errors.name}</span>
                         </label>
                         <div className='profile__line'></div>
                         <label className='profile__label'>
@@ -49,7 +49,8 @@ function Profile({ loggedIn, onSignOut, onUpdateUser }) {
                             <span id='profile-error' className='profile__error'>{errors.email}</span>
                         </label>
                     </fieldset>
-                    <button className={!isValid || (currentUser.name === values.profilename && currentUser.email === values.email) ? 'profile__button-edit_error' : 'profile__button-edit'}
+                    <button className={!isValid || (currentUser.name === values.name && currentUser.email === values.email) ? 'profile__button-edit_error' : 'profile__button-edit'}
+                        disabled={!isValid || (currentUser.name === values.name && currentUser.email === values.email)}
                         type='submit'>Редактировать</button>
                     <button className='profile__button-exit' type='button' onClick={onSignOut} >Выйти из аккаунта</button>
                 </form>

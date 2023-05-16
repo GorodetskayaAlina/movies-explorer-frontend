@@ -310,6 +310,7 @@ function App() {
       auth.getContent(jwt).then((res) => {
         if (res) {
           setLoggedIn(true);
+          setCurrentUser(res);
           history.push(location);
         }
       })
