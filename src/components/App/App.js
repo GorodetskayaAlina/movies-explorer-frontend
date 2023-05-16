@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Route, Switch, useHistory, useLocation } from 'react-router-dom';
+import { Route, Switch, useHistory, useLocation, Redirect } from 'react-router-dom';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
 import Profile from '../Profile/Profile';
@@ -373,11 +373,11 @@ function App() {
           </Route>
 
           <Route exact path='/signup'>
-            <Register onRegister={handleRegister} />
+            {loggedIn? <Redirect to='/' /> : <Register onRegister={handleRegister} />}
           </Route>
 
           <Route exact path='/signin'>
-            <Login onLogin={handleLogin} />
+          {loggedIn? <Redirect to='/' /> : <Login onLogin={handleLogin} />}
           </Route>
 
           <ProtectedRoute exact path='/profile'
