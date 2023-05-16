@@ -329,7 +329,7 @@ function App() {
   function onSignOut() {
     localStorage.clear();
     setLoggedIn(false);
-    history.push('/signin');
+    history.push('/');
     setFoundMovies([]);
   }
 
