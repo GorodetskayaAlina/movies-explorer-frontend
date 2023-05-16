@@ -1,0 +1,9 @@
+export const BOTTOM_BORDER_BIG_WIDTH = 1279;
+export const TOP_BORDER_MIDDLE_WIDTH = 1280;
+export const BOTTOM_BORDER_MIDDLE_WIDTH = 768;
+export const TOP_BORDER_SMALL_WIDTH = 767;
+export const ADDING_MOVIES_BIG_WIDTH = 3;
+export const ADDING_MOVIES_SMALL_WIDTH = 2;
+export const MOVIE_LIST_BIG_WIDTH = 12;
+export const MOVIE_LIST_MIDDLE_WIDTH = 8;
+export const MOVIE_LIST_SMALL_WIDTH = 5;

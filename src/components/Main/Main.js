@@ -8,10 +8,10 @@ import AboutMe from '../AboutMe/AboutMe';
 import Portfolio from '../Portfolio/Portfolio';
 import Footer from '../Footer/Footer';
 
-function Main() {
+function Main({loggedIn}) {
   return (
     <main className='main'>
-      <Promo />
+      <Promo loggedIn={loggedIn} />
       <NavTab />
       <AboutProject />
       <Techs />

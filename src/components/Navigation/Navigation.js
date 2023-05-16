@@ -32,7 +32,7 @@ function Navigation({ loggedIn }) {
                 </div>
             )}
             {!isPopupOpen ? (
-                <button className={location === '/' ? 'navigation__popup_close' :'navigation__popup'} onClick={togglePopup}></button>
+                <button className={loggedIn ? 'navigation__popup' : 'navigation__popup_close'} onClick={togglePopup}></button>
             ) : <Popup onClose={togglePopup} />
             }
         </nav>

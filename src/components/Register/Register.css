@@ -126,6 +126,22 @@
     cursor: pointer;
 }
 
+.register__button_error {
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+    width: 396px;
+    height: 45px;
+    border: none;
+    margin: 75px auto 16px;
+}
+
 .register__text {
     font-family: 'Inter', 'Arial', sans-serif;
     font-style: normal;
